@@ -777,7 +777,6 @@ adapters.forEach(function (adapter) {
         return db.post(doc).then(function () {
           throw new Error('shouldn\'t have gotten here');
         }, function (err) {
-          console.log(err);
           err.status.should.equal(412);
         });
       });
@@ -1029,7 +1028,6 @@ adapters.forEach(function (adapter) {
           }).then(function () {
             throw new Error('shouldn\'t have gotten here');
           }, function (err) {
-            console.log(err);
             err.status.should.equal(412);
           });
         }));
